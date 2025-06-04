@@ -9,6 +9,7 @@ help:
 	@echo "  clippy (lint)     - Run Clippy on the workspace"
 	@echo "  fmt               - Format the project using nightly"
 	@echo "  potree-build      - Build `potree` assets so that they can be embedded"
+	@echo "  package           - Package the crate for release"
 
 # Development group
 .PHONY: build b
@@ -31,4 +32,8 @@ fmt:
 .PHONY: potree-build
 potree-build:
 	./scripts/build_potree_assets.sh
+
+.PHONY: package
+package: potree-build
+	cargo package --allow-dirty
 

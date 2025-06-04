@@ -2,6 +2,7 @@
 name = "potree-embed"
 version = "0.1.0"
 edition = "2024"
+include = ["src/*", "built_assets/*"]
 
 [dependencies]
 rust-embed = "8.7.2"

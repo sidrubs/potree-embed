@@ -1,0 +1,10 @@
+[package]
+name = "potree-embed"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+rust-embed = "8.7.2"
+
+[features]
+compression = ["rust-embed/compression"]

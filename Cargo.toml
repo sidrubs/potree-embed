@@ -2,6 +2,8 @@
 name = "potree-embed"
 version = "0.1.0"
 edition = "2024"
+license = "MIT"
+description = "Built `potree` static files in a `rust-embed` struct so that they can be embedded into a Rust application."
 include = ["src/*", "built_assets/*"]
 
 [dependencies]

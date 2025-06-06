@@ -32,6 +32,7 @@ fmt:
 .PHONY: potree-build
 potree-build:
 	./scripts/build_potree_assets.sh
+	./scripts/copy_potree_assets.sh
 
 .PHONY: package
 package: potree-build

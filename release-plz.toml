@@ -1,4 +1,5 @@
 [workspace]
 # Need to build static JS assets which are not committed to the git repo.
 allow_dirty = true
+publish_allow_dirty = true
 release_always = false

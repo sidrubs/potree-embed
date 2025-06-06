@@ -1,0 +1,954 @@
+# Changelog
+
+All notable changes to this project will be documented in this file.
+
+The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
+and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+
+## [Unreleased]
+
+## [0.1.0](https://github.com/sidrubs/potree-embed/releases/tag/v0.1.0) - 2025-06-05
+
+### Added
+
+- Init potree-embed
+
+### Changed
+
+- changed HIGHLIGHT_INSIDE to render inside red instead of outside gray
+
+### Fixed
+
+- fix bug when unfocusing from 360 image and clicking anywhere but a 360 sphere, which then breaks 360.
+- fix eventart logo
+- fix ept loader
+- fix some three.js 123 update issues
+- fix extra attribute range display
+- fix uint -> int interpretation of coordinates
+- fix exception when multi-segment profile request returns a segment without new points
+- fix #846 "Bad vertical scale on profile"
+- fix demos; update readme; add showcase to readme
+- fix Save/Load Project ([#851](https://github.com/sidrubs/potree-embed/pull/851)), fix 360 images visibility toggle in sidebar, add JSON5 and store project files in json5 format.
+- fix LoadProject (EDL not shown in sidebar); #852, by @ilisalis
+- fix return nr rendering; exlcude position from selectable attributes
+- fix #826
+- fix shadow mapping
+- fixed "no such file or directory, open './build/shaders/shaders.js'"
+- fix black point cloud in elevation and shapefile examples
+- fix measurements.html
+- fix edl shader compilation warning
+- fix missing bbox in edl renderer
+- fix edl shining through meshes
+- fix
+- fix HQ splatting for multiple point clouds in a scene
+- fix transparency, but only functional without EDL
+- fix page
+- fix edl
+- fix memory leak in laz worker
+- fix #464, too many workers in case of multiple point clouds
+- fix & improve annotations; + annotation perf test
+- fix frustum culling
+- fix Arena4D; update examples
+- fix annotation bug
+- fixes and polishing
+- fixes & cleanup
+- fix some bugs; update examples
+- fix DXFExporter
+- fix dxf export; fix coordinate editing in Edge; default edl strength 0.4
+- fix arena4d code
+- fix profile extraction
+- fix profile extraction
+- fix estimateHeightAt
+- fix undefined issue in scene.estimateHeightAt()
+- fix shapefile example; fix zoomTo / top / side / front
+- fix annotation visibility; add showSources function for map view
+- fix hierarchical annotations
+- fix #347, wrong node offsets for las/laz and greyhound
+- fixing DEM generation
+- fix annotation performance issues due to frequent layout reflow
+- fix map annotations for annotation hierarchies
+- fix scissor test during picking. previously, the whole screen was rendered instead of the small pick window
+- fix classification filter, #333
+- fixed #330; some refactoring and perf improvements
+- fix profile to las export
+- fix csv export
+- fix rendering errors during picking
+- fix edl
+- fix css issues
+- fix transparent dropdown issue
+- fix some issues that were reported by jshint
+- fix picking; improve annotations; cleanup css; put some greyhound loader utility functions into its own class/namespace
+- fix area measurement; fix some hierarchical annotation stuff
+- fixed point size seems like a better choice for the entwine example
+- fix classification typo in Greyhound loader
+- fix jitter of measure tool lines
+- fixing stuff and improving behaviour
+- fix classification coloring #273
+- fix annotations
+- fix las/laz loading; work on map view
+- fix skybox in EDL and elevation material
+- fix skybox and add new skybox
+- fix Arena4D point picking
+- fix alignment of different octree levels
+- fix some coordinate and scale issues
+- fix high quality splatting
+- fix measurements and profiles
+- fixed #233, thanks to @eVk2012
+- fixes
+- fix EDL mode checkbox display; #237
+- fix bug in map selection download when using relative URLs
+- fix crash when rendering intensity in 2d elevation profile
+- fix reused loop variable issue ([#1137](https://github.com/sidrubs/potree-embed/pull/1137)); improve min/max point sizes
+- fix move speed slider; add camera to map view
+- fix HQ-Splats; fix single value attributes(intensity, classification) in 2d profile
+- fix skybox; allow farther zoom into profile
+- fix profile scales and axes
+- fix display of number of points in profile
+- fixed height profile cut plane with markers at different heights. Cut plane must be aligned orthogonal to ground, i.e ignore height differences
+- fixed annotation example
+- fixing some gui elements
+- fixing stuff and refactoring usage
+- fixing point budget
+- fixing bugs caused by rendering multiple point clouds
+- fixed geo controls left and right mouse events
+- fix geo controls
+- fix arena4d rendering
+- fix a memory leak
+- fix bugs; make bb visible in EDL mode; ...
+- fix material selection
+- fix some jshint warnings
+- fix some classification handling
+- picking in adaptive mode done on wrong point sizes
+- fixed a bug with occasionally floating nodes...hopefully
+- fix traversal; use cubic bb instead of tight bb (better behaviour);
+- fix DEM
+- fix phong rendering with picking
+- fix splats with multiple material instances; builds; fix adaptive point size
+- fixing transformation tool. Thanks to @chiccorusso
+- fix clip boxes
+- fix scope
+- fix picking on point clouds without normals
+- fix kd-tree adaptive size
+- fix picking bug with point clouds without normals
+- fix potential infinite loop in orbit controls
+- fix globals and stuff
+- fix mouse move events after double click event
+- fixed crash when point target is set to 0
+- fix double slashes in URL
+- fixed memory management
+- fix point picking after window resize
+- fix splat rendering after window resize
+- fix volume tool
+- fixed finish tool bug; made profile setWidth() do updates automatically
+- fix material updating bug
+- fixed minor 'bug' in EarthControls
+- fixed hierarchy loading bug
+- fix bug in EarthControls
+- fixed intensity
+- fixed invalid global var access
+- fixed path to js include in examples
+- fixed vol_total point cloud data
+- fixed georef example
+- fixed point picking for las/laz point clouds
+- fixes for point size adjustment
+- fixed check if cloud.js octreeDir is absolute or relative
+- fixed transformation of bounding box
+- fixed interpolation material extension test
+- fixed las and laz examples
+- fixed 'toOrigin' option for large coordinates
+- fixed merging issues
+- fixed examples
+- fixed bounding box handling
+- fixed LOD
+- fixed bug that occured with == to === replacement
+- fixed point picking
+- fixed FixedPointSizeMaterial and some minor stuff
+- fixed some errors/warning reported by gulp test
+- fixed a few syntax errors
+- fixed a few syntax errors
+- fixed a few syntax errors
+
+### Other
+
+- *(release-plz)* Intitialize release-plz ([#2](https://github.com/sidrubs/potree-embed/pull/2))
+- *(packaging)* Set up packaging
+- Add Makefile and README
+- add sponsor SkyeBrowse
+- Merge pull request #1392 from michael-erskine/patch-1
+- annotation tool: Fix `viewer` not being in scope.
+- Update README.md
+- Update README.md
+- Properly handle empty point data nodes for COPC.
+- Add color option to EPT/COPC examples.
+- Add initial COPC and LAS 1.4 support.
+- make extra attribute GUI more like the elevation GUI
+- add catalan translation
+- update sponsors
+- lasexporter should take "color" if "rgba" is not present
+- Merge pull request #1206 from sketchpunk/develop
+- Merge pull request #1266 from Tars4815/develop
+- Merge pull request #1178 from roy-mdr/profile-dxf
+- Optimize DXF exporter
+- Fixed real coordinates
+- Added DXF 3D
+- Profile DXF download
+- add new sponsor
+- Removed unused function (hinted at in #921), updated sponsors
+- Merge pull request #876 from zarov/cleanup-lasworker
+- Merge pull request #922 from sverbist/remove-duplicate-generateMatcapTexture-function
+- Merge pull request #961 from yuhangch/i18n-zh-support
+- Merge pull request #970 from pierotofy/patch-3
+- Fix issue with latest chrome update.
+- Merge pull request #959 from bmichalowski/profile-remove-hardcoced-cords
+- Merge branch 'develop' of https://github.com/potree/potree into develop
+- workaround for #972
+- ...
+- update 1.8 release  stuff
+- estimate vr fov
+- update examples; polishing
+- re-add intensity range estimation ([#867](https://github.com/sidrubs/potree-embed/pull/867))
+- Merge branch 'develop' of https://github.com/potree/potree into develop
+- ...
+- ...
+- polishing
+- refactoring to three ES6 modules
+- ...
+- ...
+- cleanup
+- update to threejs 124; fixes state reset and vr cam issues
+- make rot/scale navigation more robust.
+- ...
+- getting nice
+- ...
+- ...
+- remove vr code from heidentor example
+- starting to get somewhere nice
+- some vr progress
+- some VR stuff working
+- start updating to three.js 123
+- Update README.md
+- Update README.md
+- added sponsor
+- update readme
+- update readme; don't await loading of root node
+- update sponsors
+- add new sponsors, update multi point cloud example
+- support brotli compression
+- fox extra attribute range display
+- supress update of extra range panel if min/max are not scalars
+- don't load children of proxy nodes until proxy is replaced with real node.
+- update license
+- update readme
+- Merge branch 'develop' of https://github.com/potree/potree into develop
+- update new format loader
+- load mn/max range from metadata
+- generatorify hierarchy loader (not active)
+- update proj4; ignore projection if it throws error
+- update new format loader
+- load arbitrary attributes (WIP)
+- prevent dbl click if zoomed to 360. load previous controls on unfocus. add image360 entries to sidebar
+- Merge branch 'develop' of https://github.com/potree/potree into develop
+- switch to DataView. Will be faster in Firefox 78. new file format loader fix
+- update new format loader
+- increase maximum zoom depth into oriented images
+- update examples and readme; polishing & minor fixes
+- Merge pull request #816 from midnight-dev/matrix-fixes
+- Revert to Markus' determinant check
+- Change so Matrix4 determinant isn't computed twice
+- Minor formatting tweak: profile.js
+- Update viewer.js
+- Update profile.js
+- Fix for THREE.Matrix3: .getInverse() can't invert
+- Fix for THREE.Matrix4: .getInverse() can't invert
+- update prototype loader for new format
+- new format  loader fixes
+- update/improve hierarchical sliders for src id and gps time
+- add 360 example (WIP, not working yet)
+- update examples; some fixes including load/save project
+- Merge branch 'develop' into feature/add-spanish-translation
+- Merge pull request #696 from NiViggiano/navcube-patch-1
+- Update NavigationCube.js
+- Fix NavCube behavior when invisible
+- only create shader build dir if it doesn't already exist
+- remove perfect-scrollbar dependencies
+- ...
+- remove perfect scrollbar due to issue with oculus quest. Srollbar sucks a but more now due to firefox not supporting nicer css properties.
+- Merge pull request #689 from potree/VR
+- ...
+- ...
+- initial VR test
+- ...
+- ...
+- ...
+- initial VR test
+- Fix device orientation
+- Merge pull request #669 from mulfvik/add-swedish-translation
+- Update blender_matcap_license.txt
+- Update matcap.html
+- Update PointCloudMaterial.js
+- Update pointcloud.vs
+- Reorder matcap textures and remove duplicate
+- UI elements for matcap selection
+- Add matcap example and potree with normals
+- Modify matcap textures with only blender 2.8 matcaps, CC0
+- Modify matcap textures with only blender 2.8 matcaps, CC0
+- Encapsulate matcap related attributes in shadercode
+- Support Matcap for Potree
+- Support Matcap for Potree
+- Add EPT Zstandard loader.
+- Produce silent error rather than crashing UI if map projection doesnt work.
+- Merge pull request #612 from connormanning/ept-profile-fix
+- Fix typo. Closes potree/potree#606
+- Add 'ticks' fallback for pre-1.0 data.
+- ticks->span.  connormanning/entwine#151.
+- Merge pull request #508 from ozvale/patch-1
+- Merge pull request #542 from rburgstaler/rpb/load-classifications-in-side-bar-classification-filter-from-classifications-defined-in-the-viewer
+- Merge pull request #563 from rburgstaler/rpb/separate-measure-data-units-from-measure-user-interface-units
+- Merge pull request #535 from schpokatron/develop
+- Merge pull request #567 from JeGoi/patch-1
+- ...
+- return number filter / ept compatibility
+- Rebuild.
+- Spaces to tabs.
+- Remove extraneous examples/point clouds.
+- Merge remote-tracking branch 'upstream/develop' into ept-merge
+- Typo.
+- Update EPT binary decoder to updated EPT schema format.
+- Update EPT examples to the latest format.
+- Update to latest EPT, using -1 as hierarchy marker and ept-data/ subdir for data.
+- EPT format updates.
+- Add binary EPT example.  Normalize colors in EPT binary loader.
+- Rename EPT loader files/classes to be consistent with EPT metadata.
+- Add EPT binary loader.
+- spaces to tabs; promises to fetch/async/await; update dependencies
+- Set projection on EPT geometry to display the map.
+- Update lion EPT sample point cloud.
+- Correct EPT spacing calculation.
+- Handle extra bytes with update laz-perf.
+- Whitespace.
+- Update NYC example, tabs->spaces.
+- Tabs->spaces in files that originated with copy/paste.
+- Add stepped hierarchy support.
+- Update EPT lion sample, get EPT loader working properly with and without GpsTime, but not for extra bytes.
+- Update to latest EPT format.
+- Add prototype EPT sample dataset.
+- Prototype EPT loader.  Combine Greyhound geometry/node to match other loaders.
+- Merge pull request #492 from potree/develop
+- some adjustments
+- improve error handling
+- Merge pull request #451 from Iconem/develop
+- third party examples and smaller fixes
+- various smaller fixes
+- ...
+- transformation tool fixes
+- update examples, smaller fixes
+- Merge branch 'develop' of https://github.com/potree/potree into develop
+- Merge pull request #489 from rob-waring/editAnnotation
+- Merge pull request #487 from rob-waring/removeAnnotation
+- cleanup build
+- sizing
+- add 3 finger translation gesture for touch devices
+- ES6ify, update README
+- ...
+- cesium retz example
+- elevation stuff & gradient icons
+- examples
+- gitignore
+- use svg icon
+- added helicopter controls
+- Merge branch 'develop' of https://github.com/potree/potree into develop
+- allow EDL even if frag_depth is not supported
+- Gradient scheme selector for elevation
+- Merge branch 'develop' of https://github.com/potree/potree into develop
+- left/right/top/... icons; fix las/laz loading
+- ...
+- cleanup
+- cleanup
+- save before some refactoring
+- spacing
+- various fixes
+- various fixes
+- various fixes
+- ...
+- clip polygons
+- hq splatting
+- hq splatting + edl
+- hq shader
+- ...
+- ...
+- some fixes
+- ...
+- ...
+- ...
+- go back to individual geometry attribute buffers using THREE.BufferGeometry
+- update css
+- cleanup css & html
+- clipping tools
+- ...
+- ...
+- Restored whitespace to match develop branch.
+- Resolved merge conflicts
+- Restored previous whitespace/tabs
+- Fixed bug in XHRFactory open override
+- Merged XHRFactory and set version suffix to synth
+- some tuning
+- make profile coordinates modifieable in panel
+- new gradients; volume gui; adaptive sizes w. >255 nodes; default elevation range;
+- update examples; cleanup code
+- allow to extract points from multiple point clouds
+- send credentials with http requests
+- add some ids to potree dom elements
+- custom sidebar section example; fix package.jso
+- add viewer.scene.estimateHeightAt
+- compute mean for each node
+- some annotation / map fixes
+- remove laz-perf logging to avoid status messages each time a node has been loaded
+- Merge branch 'develop' of https://github.com/potree/potree into develop
+- take pointcloud position into account for dem height
+- some dem optimizations
+- add shapefile example; fix las/laz
+- limit number of nodes transfered to GPU each frame; limit DEM depth
+- DEM mostly done; some perf improvements to annotations
+- some progress on DEM
+- show annotations on map + checkbox in GUI
+- make annotations show up in map view
+- some WIP in comments
+- improve build for workers
+- updating to threejs 85
+- working on update to threejs85
+- profile clipping
+- add input fields to change properties of volume measurements
+- Merge pull request #328 from elemoine/intensity-norm
+- merge #142; cull nodes that are outside of the clip box
+- build shaders with multiline strings instead of line array and join
+- update examples; fix color picker
+- add color picker for the single color material
+- cleanup viewer.js
+- refactor ProfileRequest
+- update css
+- commit before trying some perf improvements
+- update viewer.html
+- improve profile and volume, prepare some stuff for download
+- rewriting profile, again
+- move some more point cloud attributes from viewer to individual point clouds; improve gulp watch
+- last change for pull request
+- pull request rdy
+- added build
+- Merge branch 'develop' of https://github.com/potree/potree into develop
+- use global material for new profile view
+- refactor PointCloudMaterial to es6 classes
+- make profile window movable and resizable
+- progress on profile
+- draw profile with three.js instead of Canvas2D. Much faster! WIP
+- finish measurement redesign; doesn't mean it's already stable
+- improve measurement panel; export whole scene to geojson or DXF
+- on the right track
+- redesign measurement panel to account for new features and a higher amount of measures
+- Merge branch 'develop' into patch-1
+- Merge pull request #303 from jtorresfabra/addLinter
+- remove debug code
+- build
+- merge changes
+- can pair actions with annotations
+- added annotation action class and a predefined show/hide annotation action
+- annotation actions can be shown in sidebar only, scene only, or both
+- improve annotation actions
+- cleanup
+- add annotation enabled checkbox; fix annotation sutff
+- hierarchical annotations
+- annotation stuff
+- refactor annotations
+- update PR template
+- update contributors
+- cleanup
+- update examples and docs
+- cleanup libs
+- Merge branch 'develop' of https://github.com/potree/potree into develop
+- annotations now accept [x, y, z] additionally to THREE.Vector3(x, y, z)
+- polishing and fixing
+- use red-rocks example by default
+- build
+- adapt far clip plane to scene; remove intensity normalization
+- Merge pull request #284 from connormanning/normalize
+- Merge pull request #283 from connormanning/develop
+- Fix hierarchy transformation for Greyhound requests.  Update Greyhound example file with new resources.
+- add geojson and dxf exporter; thanks to @jubru
+- load workers (laslaz, binary, grehound workers) on demand
+- add clip volume example; make some setters (material, clip mode, ...) reflect their changes to the GUI
+- make viewer an EventDispatcher; make viewer.addEventListener(update, ...) available
+- render main scene after point cloud scene to avoid point cloud being rendered over TextSprites
+- cancel current insertion if new volume insertion starts
+- cancel current insertion if a new insertion is started
+- add marker_dropped event
+- finish profile->csv exporter
+- make line red. green line on green landscape wasn't a smart choice
+- add polyline example; work on profile to csv export
+- make it possible to add multiple point clouds with some initially invisible. plus example for that
+- Adde three.js mesh example; updated others
+- open 2d profile on profile insertion
+- improve mobile device support
+- es6ify PointCloudOctree
+- make near clip dependant of lowest visible point spacing
+- some fixes, especially for firefox
+- some polishing and updating examples
+- build
+- some polishing
+- add basic rotation handles to transformation tool
+- adding hover menu for transformation tool. This is gonna be good
+- start improving sidebar menu behaviour. It's no longer an accordion but individual expandables now
+- some polishing
+- finish earth controls
+- polishing
+- polishing and fixing stuff
+- improve navigations and navigation switch behaviour
+- fine tuning and bugfixing
+- progress on profile
+- progress on volumes
+- slowly making transformation tools work...again
+- some success with measuring and orbit refactor
+- refactoring input handling / navigation ... again
+- commit before trying another controls approach...
+- some fixes before getting on with the volume tool
+- more refactoring for navigation
+- refactor navigation
+- refactor navigation
+- experiment with DEMs
+- update controls
+- reimplement EarthControls
+- repair map view
+- add auto updating position and target parameters to url
+- make edl shader work with regular scene objects
+- make Arena4D streaming work again
+- merging entwine support mostly finished. Different levels are not perfectly aligned
+- start merging entwine integration
+- redo FPS controls
+- update measurement and annotation examples
+- finish annotation panel in sidebar; support annotation view and annotation actions
+- add annotation panel to sidebar; improve annotations
+- some progress
+- start with animation paths
+- more refactoring; approaching something nice
+- some more refactoring
+- more refactoring
+- switch to z-up coordinate space
+- add background selection
+- some more refactoring
+- merge
+- build
+- some more refactoring
+- Switch to threejs with double precision; refactor for maintanance
+- commit before doing some dangerous changes
+- start adding annotation link/callback
+- update to threejs 82
+- polishing composite material and stuff
+- some polishing
+- progress on composite material
+- finished picking update
+- progress on making picking work again
+- updating to threejs 81; start with composite color modes, e.g. RGB + Elevation
+- builds
+- add queries and minor fixes
+- commit before doing some dangerous stuff
+- reworking Eye-Dome-Lighting
+- realy add PR template
+- try PR template
+- add localization library i18next
+- Merge branch 'develop' of https://github.com/potree/potree into develop
+- do some url normalization
+- conflicts
+- improve relative path handling; update lasmap and LICENSE; ...
+- improve track behavour and add rotate listener
+- update map; option to keep camera relative to spline path
+- don't render invisible point clouds in 2d profile; add pointcloud.setName() method and display name in scene panel
+- change wrong uses of viewer variable to scope variable
+- prepare for werd new clipping technique; disable annotations during navigation
+- start making some parameters modifieable by GET url arguments
+- rename tree depth render mode to Level of Detail (LOD) and fix performance / crash problems
+- use 0.75 percentille as choice for intensity cap
+- restricting measurement tool dragging to clip area if CLIP_OUTSIDE
+- Merge pull request #195 from potree/arena4d_support
+- flip y axis of orbit controls and make mouse buttons explicit in code
+- add lasmap; show potree, github, twitter and version numbering
+- remove 1.4RC example
+- update examples; some polishing; RC ready
+- use svg icons instead of png; memory leak fix; store bounding box in saved profile
+- update about section
+- enhance profile; add remaining properties to saved profiles; add clip mode and minNodeSize to GUI
+- add colors to profile download
+- download profile
+- update example cloud.js; fix profile for pointclouds in BINARY format
+- update viewer; polishing map behaviour
+- bugfixes; download tool, etc
+- builds
+- styling
+- remove bootstrap dependencies; some polishing
+- some polishing
+- changes to build process
+- toggle profile size button
+- profile point hover info; draw profile with height, intensity, rgb or classification materials
+- display all point attributes for coordinate measures; bugfixes; annotation events
+- ...
+- move visibility code to Potree.js; builds
+- aspect ratio 1 for 2d height profiles
+- builds
+- GeoControls can now be constrained to a THREE.SplineCurve3
+- add markers to 2d profile
+- improve viewer
+- support profile of multiple point clouds
+- improve 2d profile
+- little adjustments
+- improve measurement panel; also show profiles and distinguish between measurement types
+- added measurement detail panel
+- save before trying something new
+- progress on new user interface; examples/jasny.html may win
+- some progress
+- some progress
+- some polishing and fixing
+- almost all previous functionality bootstrappified
+- progress in bootstrapifying
+- trying out bootstrap user interface
+- point budget accounts for all point clouds combined, not individually
+- initial prototype
+- add minimum and exact jump distance properties to viewer
+- react on key inpots only when canvas is focused
+- refactoring
+- update annotation example
+- improving visibility of measure labels
+- keep annotation label dimensions the same on hover
+- add annotation descriptions and user defined titles
+- adding geocontrols
+- builds
+- add logo; thanks to @Maartenvm
+- do not zoom on double click while using measurement tools
+- updating examples; fix opacity in EDL mode
+- double click zoom for flight and earth controls
+- add annotation example and update all the others; make builds
+- some async height profile improvements such as stopping after a certain amount of points
+- minor profile fetch fix
+- oh my god it works: asynchronuous download of height profile data up to user defined level or all levels
+- starting with profile functions that read missing nodes from server
+- refactoring viewer; update builds
+- refactor viewer code into an object; simplify viewer.html; improve annotations
+- pack viewer into its own class vor simpler handling and to avoid globals
+- classification stuff
+- add zoom to double clicked position on orbit controls
+- make bounding box visible in EDL mode; add EDL strength and readius options
+- allow show/hide points depending on their classification
+- update examples
+- update readme and docs; update viewer.js
+- arena4d rendering fixes
+- arena4d viewer bugfixes; build
+- change number of returns coloring to that of lasview
+- change height to elevation
+- update cesium demo
+- update cesium example; update to threejs 71
+- upgrading to three.js 71
+- update viewer example; add measurement example
+- performance improvements; experimental
+- calculate tightBoundingBox for each node at load time
+- apply point picking fix by gribbet
+- remove tightBoundingBox
+- update examples; cleanup stuff; builds
+- write depth to float texture alpha channel instead of using depth texture. float texture is more widely supported
+- cleanup and small improvements
+- using WEBGL_DEPTH_TEXTURE extension to remove the depth pass. causes precision problems for EDL
+- some improvements
+- some stuff
+- cleanup EDL code
+- some EDL improvements
+- switch from SSAO test code to EDL code. I'm now convinced that EDL is magic
+- added averaging filter. to be replaced by blur
+- refactoring viewer.js
+- further improvements
+- make LOD borders in SSAO less obvious.
+- add random sample kernel rotation to SSAO
+- first success with ambient occlusion. it's AWESOME
+- update readme
+- update examples
+- refactor viewer.html and arena4d.html
+- revert to one material per octree; start refactoring viewer.html
+- update examples
+- move PointAttribute* classes to Potree namespace
+- builds
+- update examples
+- remove access to deleted variable
+- update examples
+- finialize oct16 normals; fix normals bugs; use camera light source
+- one material instance per node instead of the whole octree; add support for oct16 normals
+- use long range loops with early termination instead of shader recompilation on loop range change
+- build
+- update examples
+- update examples
+- update readme
+- update examples
+- add normals to lion point cloud
+- refactoring
+- rendering normals and lights; merge arena4d material into octree material; builds
+- move shader code to seperate files; improve builds; builds
+- add support for normals
+- add function to check whether node is fully, partially or not inside the frustum
+- update arena4d example
+- use highp if available, mediump otherwise -> fixing clipping issues on iphone
+- refactoring materials
+- add spacing for adaptive point size mode. adaptive point size 1 sets world space point size to the spacing
+- build; improve example
+- improving arena4d support; add arena4d viewer example
+- prototype of adaptive point size mode for arena4d
+- minor improvements
+- improving arena4d support
+- initial support for Arena4D Point Server
+- build and update build documentation
+- add marker_moved and insertion_finished events to tools
+- integrate AngleTool into MeasuringTool
+- add reset() functions to some measure tools
+- add custom classification colors
+- users can define custom gradients for point cloud material
+- add max size property to material
+- improve DEM collisions
+- finish tools with double click; make tools independant of field of view
+- improving orbit controls
+- added profile and marker events to profile tool
+- change GUI settings; add DEM Collisions checkbox
+- [**breaking**] generating DEM on the fly; stop controls from moving through DEM
+- volume tool can be created, modified and removed programmatically; fix warnigns caused by TextSprite
+- integrated area tool into measurement tool
+- improving distance measurement; can be created, removed, modified programmatically
+- add top, front, left, right view methdos
+- refactoring profile tool; profiles can be created and modified programmatically
+- refactor material; fix splat min size in viewer.html
+- make blend depth dependent on world space point size
+- improving interpolation mode
+- Update README.md
+- builds; fixed EarthControls mouse position detection in non fullscreen canvas
+- Added memory management
+- update readme and changelogs
+- remove wrong description from lion examples
+- moved settings.txt
+- updated examples
+- builds
+- update docs
+- builds; make hierarchyStepSize dependant on octreeDepth
+- builds; update viewer.html
+- updating/refactoring EarthControls
+- remove hierarchy entirely from cloud.js, including root.
+- add minimal example
+- update docs
+- add EarthControls to viewer
+- Add setTextColor to TextSprite; fix VolumeTool label; make labels bigger
+- support hiding point cloud with pointcloud.visible attribute
+- build
+- apply mouse picking bugfix for non-fullscreen canvas by @chiccorusso
+- Added AngleTool (by @Maartenvm); refactoring PointCloudOctree.update(); show only available attributes in Materials drop down; builds
+- load bin files in WebWorkers;
+- add --output-attributes parameter. Allows to write INTENSITY and CLASSIFICATION to bin format
+- build
+- add project() functionality to getProfile() return value
+- getPointsInProfile() returns points segment by segment; each segment has a project() function to align points in this segment to x-axis
+- build
+- remove the accuracy parameter from all point picking calls
+- improving point picking; returning all point attributes for pick and profiles
+- Merge pull request #126 from potree/cloudjs
+- check interpolationand splat support; interpolation is now standard, if supported
+- build
+- improving point picking
+- restructuring partial hierarchy; making sure old formats are supported; build potree.js
+- updated builds
+- added pivot indicator to EarthControls; Added point pick window
+- working on improved point picking
+- update to threejs r70
+- switch to threejs r70
+- finished EarthControl drag/zoom/rotate functionality
+- progress on EarthControls
+- initial EarthControls commit
+- reading hierarchy from seperate files
+- Fixes in the creation of the skybox.
+- updated getting started
+- added roadmap
+- added scripting documentation
+- add break
+- updated builds
+- updated docs&readme
+- updated viewer
+- Merge pull request #95 from potree/profile_tool
+- updated examples
+- updated examples
+- updated example point clouds
+- remove unecessary file
+- updated examples
+- updated build
+- added pointcloud.getPointsInProfile(); added ux for profile width
+- updated docs and readme
+- improvements
+- updating reader to potree format 1.4; added icons; updated viewer
+- profile tool interface is now similar to distance tool
+- very experimental! improving different quality modes
+- added high quality splatting
+- added different clipping modes; replaced buttons with icons
+- added procedural background
+- new background
+- added some tool icons
+- adding nice background; refactoring volume tool
+- implemented multiple clip boxes, for profile as well as volume
+- create a new profile tool in a similar fashion to the new measurement tools
+- Merge pull request #89 from potree/tools
+- Merge branch 'tools' of https://github.com/potree/potree into tools
+- updated examples
+- updated builds
+- added viewer.html example
+- using mediump instad of highp for compatibility and reasons
+- made volume label scale independant; displaying area label
+- finished scene unit based point size metric. adaptive point size involves the point cloud spacing as well
+- progress on making point size metric a direct representation of the scene units
+- added area tool
+- finished rotation
+- added scale tool
+- added scale tool
+- making measurement points dragable
+- process on transformation tools
+- updated builds
+- added rotate event dispatcher to first person controls; fixed firefox wheel speed
+- Update changelog.md
+- Update changelog.md
+- update changelog and readme
+- Update changelog.md
+- added changelog
+- made measurement tool independant of scale
+- refactoring loading nodes; added support for binary version 1.4 - ending with .bin
+- added support for return number and point source id
+- updating examples; cleaning up
+- updated examples; code cleanup
+- bugfixes; added getProfile again
+- finally fixed the worst flashing bugs
+- improve LOD
+- improving LOD
+- removing classificaiton material, updating build
+- cleaning up materials
+- combining all the different materials into a single one
+- cleaning up the material
+- some progress
+- choosing less ridiculous point size
+- holy shit, it's almost done and it looks great
+- working on first 2 levels now
+- progress on filling
+- first working point size adjustment for root node. woohoo!
+- merging profile to develop
+- improve LOD/point count target
+- update to three.js r69
+- slight change to lod, comments for fog in interpolation shader
+- added minSize attribute to materials. updated build
+- custom updateMatrixWorld() for PointCloudOctree
+- added a comment for a possible performance improvement
+- improve lod decrease
+- replaced LOD with point count target
+- updated build
+- added high quality interpolation material
+- made laslaz optional
+- height material now displays a gradient
+- added color property to PointCloudColorMaterial
+- Merge pull request #57 from potree/georeferencing
+- minor stuff
+- deleted some temporary examples
+- finished examples, added point cloud for georef examples
+- trying difference encoding
+- load near nodes first
+- finished georeferencing example
+- added a georeferencing example
+- progress on measuring; refactoring
+- progress in profile tool
+- progress on profile
+- progress on measurement and profiles; aded TextSprite
+- Improved label helper, added point picking to georeferencing example
+- added FloatingOrigin to preserve precision in huge worlds
+- updated point_picking example to three.js r68
+- updated to three.js r68
+- merged changes from marteenvm
+- .
+- added classification material
+- made build
+- merging
+- added las and laz examples
+- .
+- some progress on large coordinate support and support for las, laz and binary
+- .
+- minor stuff
+- fiddling around
+- added some materials, general improvements
+- using plas.io's laslaz.js to handle las and laz octrees
+- added move event listener to FirstPersonControls
+- Merge branch 'develop' of https://github.com/potree/potree into develop
+- added first person controls and camera.zoomTo(node)
+- updated documentation
+- improved lion pointcloud quality, updated examples
+- improved octree traversal performance
+- Update README.md
+- added moveToOrigin and moveToGroundPlane functions
+- updated examples
+- added disposal of least recently used nodes
+- minor fixes; added stats and dat.gui libraries
+- added distance measure example, improved skybox example
+- cleanup workspace, add examples
+- updated skybox demo
+- updated to latest three.js dev build, added skybox demo
+- point picking
+- added LOD and FrustumCulling
+- removing unnecessary code
+- rewrite from scratch as three.js based project
+- Update README.md
+- Update README.md
+- Update README.md
+- Update README.md
+- Update README.md
+- Update README.md
+- Update README.md
+- Update README.md
+- Update README.md
+- Merge branch 'develop' of https://github.com/potree/potree into develop
+- improved OrbitCamHandler. The lion and procedural_shell examples use it now.
+- Rename how_to_create_or_load_your_own_pointclouds to how_to_create_or_load_your_own_pointclouds.md
+- Rename how_to_create_your_own_pointcloud_loader.md to how_to_create_or_load_your_own_pointclouds
+- Update doc.md
+- Merge branch 'develop' of https://github.com/potree/potree into develop
+- made OES_texture_float optional. Also added skeleton for a google earth like cam handler: EarthCamHandler.js
+- updated documentation
+- Update file_format.md
+- replaced !== null and === null with != null and == null, where necessary
+- added link to documentation
+- copy images to build directtory, fixes #16
+- Merge branch 'develop' of github.com:potree/potree into develop
+- copy resources and examples, build example list in index.html
+- Replaced ' != ' with ' !== ' to prevent errors show up in the test tool
+- Replaced ' == ' with ' === ' to prevent errors show up in the test tool
+- Repalced Schütz with Schuetz to prevent errors show up in the test tool
+- split of paths.scripts object broke test #11
+- added preserveLicense to prepend license to Javascript builds, fixes #12
+- Merge branch 'develop' of github.com:potree/potree into develop
+- added license files to be prepended to built libraries
+- merged document folder into
+- Merge branch 'documentation' into develop
+- Merge branch 'feature-gulp' of github.com:potree/potree into feature-gulp
+- separate libraries in build, fixes #12
+- added simple server
+- build docs and css (basics)
+- added clean, test, debug and build task
+- added gulp.js with basic configuration to minify and concatenate Javascript files
+- Update README.md
+- Update README.md
+- Merge branch 'master' of https://github.com/potree/potree
+- added converter binaries
+- added lion.html
+- adding lion pointcloud
+- ...
+- initial test
+
+### Removed
+
+- removed build
+- removed global material
+- removed access of global scene variable in PointCloudOctree
+- removed global variables access from EarthControls
+- removed roadmap from repository to wiki
+- removed old vol_total pointcloud data
+- removed unnecessary code
+- removed outdated docs
+- removed binaries - they'll be available for download at potree.org
+- removed unnecessary libraries

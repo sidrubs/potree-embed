@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.1.0-alpha.5](https://github.com/sidrubs/potree-embed/compare/v0.1.0-alpha.4...v0.1.0-alpha.5) - 2025-07-25
+
+### Fixed
+
+- *(potree-deps)* Downgrade to Gulp 4
+
 ## [0.1.0](https://github.com/sidrubs/potree-embed/releases/tag/v0.1.0) - 2025-06-05
 
 ### Added
